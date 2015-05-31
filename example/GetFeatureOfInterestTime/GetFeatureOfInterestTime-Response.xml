@@ -1,0 +1,4 @@
+<gml:TimePeriod xmlns:gml="http://www.opengis.net/gml">
+    <gml:beginPosition>2011-01-01T00:00:00.000+08:00</gml:beginPosition>
+    <gml:endPosition>2011-01-01T00:02:00.000+08:00</gml:endPosition>
+</gml:TimePeriod>

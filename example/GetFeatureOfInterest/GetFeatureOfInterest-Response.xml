@@ -1,0 +1,17 @@
+<sa:SamplingPoint 
+	xmlns:sa="http://www.opengis.net/sampling/1.0" 
+	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	gml:id="sta-a001">
+	
+    <gml:name>station a001</gml:name>
+	
+    <sa:sampledFeature xlink:href="urn:ogc:def:nil:OGC:unknown" />
+	
+    <sa:position>
+        <gml:Point gml:id="point_sf_1">
+            <gml:pos srsName="urn:ogc:def:crs:EPSG::4326">30.535296 114.369321</gml:pos>
+        </gml:Point>
+    </sa:position>
+	
+</sa:SamplingPoint>

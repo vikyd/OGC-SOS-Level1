@@ -1,0 +1,91 @@
+<om:ObservationCollection 
+	xmlns:om="http://www.opengis.net/om/1.0" 
+	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" 
+	xmlns:sa="http://www.opengis.net/sampling/1.0"
+	xsi:schemaLocation="
+	 http://www.opengis.net/om/1.0
+	 http://schemas.opengis.net/om/1.0.0/extensions/observationSpecialization_constraint.xsd
+	 http://www.opengis.net/sampling/1.0
+	 http://schemas.opengis.net/sampling/1.0.0/sampling.xsd"
+	gml:id="oc_1421851262390" >
+	
+    <gml:boundedBy>
+        <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+            <gml:lowerCorner>30.535296 114.369321</gml:lowerCorner>
+            <gml:upperCorner>30.535296 114.369321</gml:upperCorner>
+        </gml:Envelope>
+    </gml:boundedBy>
+	
+    <om:member>
+        <om:Observation gml:id="go_1421851262391">
+		
+            <om:samplingTime>
+                <gml:TimePeriod xsi:type="gml:TimePeriodType">
+                    <gml:beginPosition>2011-01-01T00:01:00.000+08:00</gml:beginPosition>
+                    <gml:endPosition>2011-01-01T00:02:00.000+08:00</gml:endPosition>
+                </gml:TimePeriod>
+            </om:samplingTime>
+			
+            <om:procedure xlink:href="urn:ABC:object:feature:Platform:Station:Weather:sta-a001" />
+			
+            <om:observedProperty>
+                <swe:CompositePhenomenon gml:id="CompositePhenomenon_urn:ABC:object:feature:Platform:Station:Weather:sta-a001" dimension="4">
+                    <gml:name>CompositePhenomenon_urn:ABC:object:feature:Platform:Station:Weather:sta-a001</gml:name>
+                    <swe:component xlink:href="http://www.opengis.net/def/property/OGC/0/SamplingTime" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Speed" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Direction" /></swe:CompositePhenomenon>
+            </om:observedProperty>
+			
+            <om:featureOfInterest xlink:title="sta-a001">
+                <sa:SamplingPoint gml:id="sta-a001">
+                    <gml:name>station a001</gml:name>
+                    <sa:sampledFeature xlink:href="urn:ogc:def:nil:OGC:unknown" />
+                    <sa:position>
+                        <gml:Point gml:id="point_sf_0">
+                            <gml:pos srsName="urn:ogc:def:crs:EPSG::4326">30.535296 114.369321</gml:pos>
+                        </gml:Point>
+                    </sa:position>
+                </sa:SamplingPoint>
+            </om:featureOfInterest>
+			
+            <om:result>
+                <swe:DataArray>
+                    <swe:elementCount>
+                        <swe:Count>
+                            <swe:value>2</swe:value>
+                        </swe:Count>
+                    </swe:elementCount>
+                    <swe:elementType name="Components">
+                        <swe:DataRecord>
+                            <swe:field name="SamplingTime">
+                                <swe:Time definition="http://www.opengis.net/def/property/OGC/0/SamplingTime">
+                                    <swe:uom xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" /></swe:Time>
+                            </swe:field>
+                            <swe:field name="Temperature">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature">
+                                    <swe:uom code="Cel" /></swe:Quantity>
+                            </swe:field>
+                            <swe:field name="Speed">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Speed">
+                                    <swe:uom code="m/s" /></swe:Quantity>
+                            </swe:field>
+                            <swe:field name="Direction">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Direction">
+                                    <swe:uom code="degree" /></swe:Quantity>
+                            </swe:field>
+                        </swe:DataRecord>
+                    </swe:elementType>
+                    <swe:encoding>
+                        <swe:TextBlock decimalSeparator="." tokenSeparator="," blockSeparator=";" /></swe:encoding>
+                    <swe:values>2011-01-01T00:01:00.000+08:00,-0.6,10.8,229.0;2011-01-01T00:02:00.000+08:00,-0.6,9.3,234.0;</swe:values>
+                </swe:DataArray>
+            </om:result>
+			
+        </om:Observation>
+    </om:member>
+	
+</om:ObservationCollection>

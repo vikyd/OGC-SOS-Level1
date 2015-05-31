@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RegisterSensor service="SOS" version="1.0.0" 
+	xmlns="http://www.opengis.net/sos/1.0" 
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" 
+	xmlns:ows="http://www.opengeospatial.net/ows" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:ogc="http://www.opengis.net/ogc" 
+	xmlns:om="http://www.opengis.net/om/1.0" 
+	xmlns:sml="http://www.opengis.net/sensorML/1.0.1" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+	 http://www.opengis.net/sos/1.0
+	 http://schemas.opengis.net/sos/1.0.0/sosRegisterSensor.xsd
+	 http://www.opengis.net/om/1.0
+	 http://schemas.opengis.net/om/1.0.0/extensions/observationSpecialization_override.xsd">
+	<SensorDescription>
+		<sml:SensorML version="1.0.1">
+			<sml:member>
+				<sml:System xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				
+					<sml:identification>
+						<sml:IdentifierList>
+							<sml:identifier>
+								<sml:Term definition="urn:ogc:def:identifier:OGC:uniqueID">
+									<sml:value>urn:ABC:object:feature:Platform:Station:Weather:sta-a001</sml:value>
+								</sml:Term>
+							</sml:identifier>
+						</sml:IdentifierList>
+					</sml:identification>
+					
+					<sml:outputs>
+						<sml:OutputList>	
+							<sml:output name="AirTemperature">
+								<swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature">
+									<gml:metaDataProperty>
+										<offering>
+											<id>ABC</id>
+											<name>ABC组织机构</name>
+										</offering>
+									</gml:metaDataProperty>
+									<swe:uom code="Cel"/>
+								</swe:Quantity>
+							</sml:output>
+							<sml:output name="WindSpeed">
+								<swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Speed">
+									<gml:metaDataProperty>
+										<offering>
+											<id>ABC</id>
+											<name>ABC组织机构</name>
+										</offering>
+									</gml:metaDataProperty>
+									<swe:uom code="m/s"/>
+								</swe:Quantity>
+							</sml:output>					
+							<sml:output name="WindDirection">
+								<swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Direction">
+									<gml:metaDataProperty>
+										<offering>
+											<id>ABC</id>
+											<name>ABC组织机构</name>
+										</offering>
+									</gml:metaDataProperty>
+									<swe:uom code="degree"/>
+								</swe:Quantity>
+							</sml:output>
+						</sml:OutputList>						
+					</sml:outputs>
+					
+				</sml:System>
+			</sml:member>
+		</sml:SensorML>
+	</SensorDescription>
+
+	<ObservationTemplate>
+		<om:Observation>
+			<om:samplingTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest/>
+			<om:result/>
+		</om:Observation>
+	</ObservationTemplate>
+	
+</RegisterSensor>

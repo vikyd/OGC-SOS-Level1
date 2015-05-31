@@ -1,0 +1,217 @@
+<om:ObservationCollection 
+	xmlns:om="http://www.opengis.net/om/1.0" 
+	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" 
+	xmlns:sa="http://www.opengis.net/sampling/1.0"
+	xsi:schemaLocation="
+	 http://www.opengis.net/om/1.0
+	 http://schemas.opengis.net/om/1.0.0/extensions/observationSpecialization_constraint.xsd
+	 http://www.opengis.net/sampling/1.0
+	 http://schemas.opengis.net/sampling/1.0.0/sampling.xsd"
+	gml:id="oc_1421851376092" >
+	
+    <gml:boundedBy>
+        <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+            <gml:lowerCorner>29.985941 113.69685</gml:lowerCorner>
+            <gml:upperCorner>31.364 115.07628</gml:upperCorner>
+        </gml:Envelope>
+    </gml:boundedBy>
+	
+    <om:member>	
+        <om:Observation gml:id="go_1421851376093">
+            <om:samplingTime>
+                <gml:TimePeriod xsi:type="gml:TimePeriodType">
+                    <gml:beginPosition>2010-12-22T10:49:47.000+08:00</gml:beginPosition>
+                    <gml:endPosition>2010-12-22T10:52:57.000+08:00</gml:endPosition>
+                </gml:TimePeriod>
+            </om:samplingTime>
+            <om:procedure xlink:href="urn:ABC:object:feature:Platform:car01" />
+            <om:observedProperty>
+                <swe:CompositePhenomenon gml:id="CompositePhenomenon_urn:ABC:object:feature:Platform:car01" dimension="4">
+                    <gml:name>CompositePhenomenon_urn:ABC:object:feature:Platform:car01</gml:name>
+                    <swe:component xlink:href="http://www.opengis.net/def/property/OGC/0/SamplingTime" />
+                    <swe:component xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:position" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Direction" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Speed" /></swe:CompositePhenomenon>
+            </om:observedProperty>
+            <om:featureOfInterest xlink:title="wuhan">
+                <sa:SamplingSurface gml:id="wuhan">
+                    <gml:name>wuhan city boundary box</gml:name>
+                    <sa:sampledFeature xlink:href="urn:ogc:def:nil:OGC:unknown" />
+                    <sa:shape>
+                        <gml:Polygon gml:id="polygon_sf_0">
+                            <gml:exterior>
+                                <gml:LinearRing xsi:type="gml:LinearRingType">
+                                    <gml:posList srsName="urn:ogc:def:crs:EPSG::4326">29.985941 113.69685 29.985941 115.07628 31.364 115.07628 31.364 113.69685 29.985941 113.69685</gml:posList>
+                                </gml:LinearRing>
+                            </gml:exterior>
+                        </gml:Polygon>
+                    </sa:shape>
+                </sa:SamplingSurface>
+            </om:featureOfInterest>
+            <om:result>
+                <swe:DataArray>
+                    <swe:elementCount>
+                        <swe:Count>
+                            <swe:value>3</swe:value>
+                        </swe:Count>
+                    </swe:elementCount>
+                    <swe:elementType name="Components">
+                        <swe:DataRecord>
+                            <swe:field name="SamplingTime">
+                                <swe:Time definition="http://www.opengis.net/def/property/OGC/0/SamplingTime">
+                                    <swe:uom xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" /></swe:Time>
+                            </swe:field>
+                            <swe:field name="position">
+                                <ns:AbstractDataRecord xmlns:ns="http://www.opengis.net/swe/1.0.1" definition="urn:ogc:def:phenomenon:OGC:1.0.30:position" xsi:type="ns:PositionType" />
+                            </swe:field>
+                            <swe:field name="Direction">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Direction">
+                                    <swe:uom code="degree" /></swe:Quantity>
+                            </swe:field>
+                            <swe:field name="Speed">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Speed">
+                                    <swe:uom code="m/s" /></swe:Quantity>
+                            </swe:field>
+                        </swe:DataRecord>
+                    </swe:elementType>
+                    <swe:encoding>
+                        <swe:TextBlock decimalSeparator="." tokenSeparator="," blockSeparator=";" /></swe:encoding>
+                    <swe:values>2010-12-22T10:49:47.000+08:00,POINT (30.555338 114.311776)#4326,358.0,10.0;2010-12-22T10:52:19.000+08:00,POINT (30.549393 114.312686)#4326,358.0,10.0;2010-12-22T10:52:57.000+08:00,POINT (30.548175 114.312875)#4326,328.0,15.0;</swe:values>
+                </swe:DataArray>
+            </om:result>
+        </om:Observation>
+    </om:member>
+	
+    <om:member>
+        <om:Observation gml:id="go_1421851376138">
+            <om:samplingTime>
+                <gml:TimePeriod xsi:type="gml:TimePeriodType">
+                    <gml:beginPosition>2010-12-22T10:48:34.000+08:00</gml:beginPosition>
+                    <gml:endPosition>2010-12-22T10:49:13.000+08:00</gml:endPosition>
+                </gml:TimePeriod>
+            </om:samplingTime>
+            <om:procedure xlink:href="urn:ABC:object:feature:Platform:car02" />
+            <om:observedProperty>
+                <swe:CompositePhenomenon gml:id="CompositePhenomenon_urn:ABC:object:feature:Platform:car02" dimension="4">
+                    <gml:name>CompositePhenomenon_urn:ABC:object:feature:Platform:car02</gml:name>
+                    <swe:component xlink:href="http://www.opengis.net/def/property/OGC/0/SamplingTime" />
+                    <swe:component xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:position" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Speed" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Direction" /></swe:CompositePhenomenon>
+            </om:observedProperty>
+            <om:featureOfInterest xlink:title="wuhan">
+                <sa:SamplingSurface gml:id="wuhan">
+                    <gml:name>wuhan city boundary box</gml:name>
+                    <sa:sampledFeature xlink:href="urn:ogc:def:nil:OGC:unknown" />
+                    <sa:shape>
+                        <gml:Polygon gml:id="polygon_sf_1">
+                            <gml:exterior>
+                                <gml:LinearRing xsi:type="gml:LinearRingType">
+                                    <gml:posList srsName="urn:ogc:def:crs:EPSG::4326">29.985941 113.69685 29.985941 115.07628 31.364 115.07628 31.364 113.69685 29.985941 113.69685</gml:posList>
+                                </gml:LinearRing>
+                            </gml:exterior>
+                        </gml:Polygon>
+                    </sa:shape>
+                </sa:SamplingSurface>
+            </om:featureOfInterest>
+            <om:result>
+                <swe:DataArray>
+                    <swe:elementCount>
+                        <swe:Count>
+                            <swe:value>3</swe:value>
+                        </swe:Count>
+                    </swe:elementCount>
+                    <swe:elementType name="Components">
+                        <swe:DataRecord>
+                            <swe:field name="SamplingTime">
+                                <swe:Time definition="http://www.opengis.net/def/property/OGC/0/SamplingTime">
+                                    <swe:uom xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" /></swe:Time>
+                            </swe:field>
+                            <swe:field name="position">
+                                <ns:AbstractDataRecord xmlns:ns="http://www.opengis.net/swe/1.0.1" definition="urn:ogc:def:phenomenon:OGC:1.0.30:position" xsi:type="ns:PositionType" />
+                            </swe:field>
+                            <swe:field name="Speed">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Speed">
+                                    <swe:uom code="m/s" /></swe:Quantity>
+                            </swe:field>
+                            <swe:field name="Direction">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Direction">
+                                    <swe:uom code="degree" /></swe:Quantity>
+                            </swe:field>
+                        </swe:DataRecord>
+                    </swe:elementType>
+                    <swe:encoding>
+                        <swe:TextBlock decimalSeparator="." tokenSeparator="," blockSeparator=";" /></swe:encoding>
+                    <swe:values>2010-12-22T10:48:34.000+08:00,POINT (30.575888 114.220618)#4326,20.0,180.0;2010-12-22T10:48:35.000+08:00,POINT (30.575671 114.221588)#4326,30.0,120.0;2010-12-22T10:49:13.000+08:00,POINT (30.575128 114.225341)#4326,24.0,281.0;</swe:values>
+                </swe:DataArray>
+            </om:result>
+        </om:Observation>
+    </om:member>
+	
+    <om:member>
+        <om:Observation gml:id="go_1421851376144">
+            <om:samplingTime>
+                <gml:TimePeriod xsi:type="gml:TimePeriodType">
+                    <gml:beginPosition>2011-01-01T00:00:00.000+08:00</gml:beginPosition>
+                    <gml:endPosition>2011-01-01T00:02:00.000+08:00</gml:endPosition>
+                </gml:TimePeriod>
+            </om:samplingTime>
+            <om:procedure xlink:href="urn:ABC:object:feature:Platform:Station:Weather:sta-a001" />
+            <om:observedProperty>
+                <swe:CompositePhenomenon gml:id="CompositePhenomenon_urn:ABC:object:feature:Platform:Station:Weather:sta-a001" dimension="4">
+                    <gml:name>CompositePhenomenon_urn:ABC:object:feature:Platform:Station:Weather:sta-a001</gml:name>
+                    <swe:component xlink:href="http://www.opengis.net/def/property/OGC/0/SamplingTime" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Speed" />
+                    <swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Direction" /></swe:CompositePhenomenon>
+            </om:observedProperty>
+            <om:featureOfInterest xlink:title="sta-a001">
+                <sa:SamplingPoint gml:id="sta-a001">
+                    <gml:name>station a001</gml:name>
+                    <sa:sampledFeature xlink:href="urn:ogc:def:nil:OGC:unknown" />
+                    <sa:position>
+                        <gml:Point gml:id="point_sf_2">
+                            <gml:pos srsName="urn:ogc:def:crs:EPSG::4326">30.535296 114.369321</gml:pos>
+                        </gml:Point>
+                    </sa:position>
+                </sa:SamplingPoint>
+            </om:featureOfInterest>
+            <om:result>
+                <swe:DataArray>
+                    <swe:elementCount>
+                        <swe:Count>
+                            <swe:value>3</swe:value>
+                        </swe:Count>
+                    </swe:elementCount>
+                    <swe:elementType name="Components">
+                        <swe:DataRecord>
+                            <swe:field name="SamplingTime">
+                                <swe:Time definition="http://www.opengis.net/def/property/OGC/0/SamplingTime">
+                                    <swe:uom xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" /></swe:Time>
+                            </swe:field>
+                            <swe:field name="Temperature">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature">
+                                    <swe:uom code="Cel" /></swe:Quantity>
+                            </swe:field>
+                            <swe:field name="Speed">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Speed">
+                                    <swe:uom code="m/s" /></swe:Quantity>
+                            </swe:field>
+                            <swe:field name="Direction">
+                                <swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Direction">
+                                    <swe:uom code="degree" /></swe:Quantity>
+                            </swe:field>
+                        </swe:DataRecord>
+                    </swe:elementType>
+                    <swe:encoding>
+                        <swe:TextBlock decimalSeparator="." tokenSeparator="," blockSeparator=";" /></swe:encoding>
+                    <swe:values>2011-01-01T00:00:00.000+08:00,-0.6,11.8,226.0;2011-01-01T00:01:00.000+08:00,-0.6,10.8,229.0;2011-01-01T00:02:00.000+08:00,-0.6,9.3,234.0;</swe:values>
+                </swe:DataArray>
+            </om:result>
+        </om:Observation>
+    </om:member>
+	
+</om:ObservationCollection>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetObservation 
+    xmlns="http://www.opengis.net/sos/1.0"
+    xmlns:ows="http://www.opengis.net/ows/1.1"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:om="http://www.opengis.net/om/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+     http://www.opengis.net/sos/1.0
+     http://schemas.opengis.net/sos/1.0.0/sosGetObservation.xsd"
+    service="SOS" version="1.0.0">
+
+    <offering>ABC</offering>
+
+    <eventTime>
+        <ogc:TM_Equals>
+            <ogc:PropertyName>om:samplingTime</ogc:PropertyName>
+            <gml:TimePeriod>
+                <gml:beginPosition>2011-01-01T00:01:00.000+08:00</gml:beginPosition>
+                <gml:endPosition>2011-01-01T00:02:00.000+08:00</gml:endPosition>
+            </gml:TimePeriod>
+        </ogc:TM_Equals>
+    </eventTime>
+
+    <procedure>urn:ABC:object:feature:Platform:Station:Weather:sta-a001</procedure>
+    <procedure>urn:ABC:object:feature:Platform:Station:Weather:sta-a002</procedure>
+
+    <observedProperty>urn:ogc:def:phenomenon:OGC:1.0.30:position</observedProperty>
+    <observedProperty>urn:ABC:def:phenomenon:ABC:1.0.0:Temperature</observedProperty>    
+    <observedProperty>urn:ABC:def:phenomenon:ABC:1.0.0:Speed</observedProperty>
+    <observedProperty>urn:ABC:def:phenomenon:ABC:1.0.0:Direction</observedProperty>
+
+    <featureOfInterest>
+        <ogc:Intersects>
+            <ogc:PropertyName>urn:ogc:data:location</ogc:PropertyName>
+            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>
+                            29.985941 113.69685 31.364 113.69685 31.364 115.07628 29.985941 115.07628 29.985941 113.69685
+                        </gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </ogc:Intersects>
+    </featureOfInterest>
+
+    <responseFormat>text/xml;subtype="om/1.0.0"</responseFormat>
+
+</GetObservation>

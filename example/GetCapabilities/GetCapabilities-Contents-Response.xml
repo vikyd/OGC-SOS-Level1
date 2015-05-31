@@ -1,0 +1,60 @@
+<sos:Capabilities 
+	xmlns:sos="http://www.opengis.net/sos/1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xsi:schemaLocation="
+	 http://www.opengis.net/sos/1.0
+	 http://schemas.opengis.net/sos/1.0.0/sosAll.xsd"
+	version="1.0.0" >
+	
+    <sos:Contents>
+        <sos:ObservationOfferingList>
+            <sos:ObservationOffering gml:id="ABC">
+			
+                <gml:name>ABC组织机构</gml:name>
+				
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+                        <gml:lowerCorner>29.985941 113.69685</gml:lowerCorner>
+                        <gml:upperCorner>31.364 115.07628</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+				
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType">
+                        <gml:beginPosition>2010-12-22T10:48:34.000+08:00</gml:beginPosition>
+                        <gml:endPosition>2011-01-01T00:02:00.000+08:00</gml:endPosition>
+                    </gml:TimePeriod>
+                </sos:time>
+				
+                <sos:procedure xlink:href="urn:ABC:object:feature:Platform:Station:Weather:sta-a001" />
+                <sos:procedure xlink:href="urn:ABC:object:feature:Platform:Station:Weather:sta-a002" />
+                <sos:procedure xlink:href="urn:ABC:object:feature:Platform:car01" />
+                <sos:procedure xlink:href="urn:ABC:object:feature:Platform:car02" />
+				
+                <sos:observedProperty xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature" />
+                <sos:observedProperty xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Speed" />
+                <sos:observedProperty xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Direction" />
+                <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:position" />
+                <sos:observedProperty xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:GPSState" />
+				
+                <sos:featureOfInterest xlink:href="sta-a001" />
+                <sos:featureOfInterest xlink:href="wuhan" />
+				
+                <sos:responseFormat>text/xml;subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseFormat>application/zip</sos:responseFormat>
+				
+                <sos:resultModel xmlns:ns="http://www.opengis.net/om/1.0">ns:Observation</sos:resultModel>
+                <sos:resultModel xmlns:ns="http://www.opengis.net/om/1.0">ns:Measurement</sos:resultModel>
+                <sos:resultModel xmlns:ns="http://www.opengis.net/om/1.0">ns:CategoryObservation</sos:resultModel>
+                <sos:resultModel xmlns:ns="http://www.opengis.net/om/1.0">ns:GeometryObservation</sos:resultModel>
+				
+                <sos:responseMode>inline</sos:responseMode>
+                <sos:responseMode>resultTemplate</sos:responseMode>
+				
+            </sos:ObservationOffering>
+        </sos:ObservationOfferingList>
+    </sos:Contents>
+	
+</sos:Capabilities>

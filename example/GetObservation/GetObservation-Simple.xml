@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetObservation 
+    xmlns="http://www.opengis.net/sos/1.0"
+    xmlns:ows="http://www.opengis.net/ows/1.1"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:om="http://www.opengis.net/om/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+     http://www.opengis.net/sos/1.0
+     http://schemas.opengis.net/sos/1.0.0/sosGetObservation.xsd"
+    service="SOS" version="1.0.0">
+
+    <offering>ABC</offering>
+
+    <observedProperty>urn:ogc:def:phenomenon:OGC:1.0.30:position</observedProperty>
+    <observedProperty>urn:ABC:def:phenomenon:ABC:1.0.0:Temperature</observedProperty>    
+    <observedProperty>urn:ABC:def:phenomenon:ABC:1.0.0:Speed</observedProperty>
+    <observedProperty>urn:ABC:def:phenomenon:ABC:1.0.0:Direction</observedProperty>
+
+    <responseFormat>text/xml;subtype="om/1.0.0"</responseFormat>
+
+</GetObservation>

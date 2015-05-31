@@ -1,0 +1,3 @@
+<sos:InsertObservationResponse xmlns:sos="http://www.opengis.net/sos/1.0">
+    <sos:AssignedObservationId>o_3</sos:AssignedObservationId>
+</sos:InsertObservationResponse>

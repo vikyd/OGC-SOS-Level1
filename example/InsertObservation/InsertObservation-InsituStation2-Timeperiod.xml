@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InsertObservation 
+	 service="SOS" version="1.0.0"
+	xmlns="http://www.opengis.net/sos/1.0" 
+	xmlns:ows="http://www.opengis.net/ows/1.1" 
+	xmlns:ogc="http://www.opengis.net/ogc" 
+	xmlns:om="http://www.opengis.net/om/1.0" 
+	xmlns:sos="http://www.opengis.net/sos/1.0" 
+	xmlns:sa="http://www.opengis.net/sampling/1.0" 
+	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+	 http://www.opengis.net/sos/1.0
+	 http://schemas.opengis.net/sos/1.0.0/sosInsert.xsd
+	 http://www.opengis.net/sampling/1.0
+	 http://schemas.opengis.net/sampling/1.0.0/sampling.xsd">
+	 
+	<AssignedSensorId>urn:ABC:object:feature:Platform:Station:Weather:sta-a002</AssignedSensorId>
+	
+	<om:Observation>
+	
+		<om:samplingTime>
+			<gml:TimePeriod xsi:type="gml:TimePeriodType">
+				<gml:beginPosition>2011-01-01T00:00:00.000+08:00</gml:beginPosition>
+				<gml:endPosition>2011-01-01T00:02:00.000+08:00</gml:endPosition>
+			</gml:TimePeriod>
+		</om:samplingTime>
+		
+		<om:procedure xlink:href="urn:ABC:object:feature:Platform:Station:Weather:sta-a002"/>
+		
+		<om:observedProperty>
+			<swe:CompositePhenomenon gml:id="cpid0" dimension="1">
+				<gml:name>resultComponents</gml:name>
+				<swe:component xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"/>
+				<swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature"/>
+				<swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Speed"/>				
+				<swe:component xlink:href="urn:ABC:def:phenomenon:ABC:1.0.0:Direction"/>
+			</swe:CompositePhenomenon>
+		</om:observedProperty>
+		
+		<om:featureOfInterest>
+			<sa:SamplingPoint gml:id="sta-a002">
+				<gml:name>station a002</gml:name>
+				<sa:sampledFeature xlink:href=""/>
+				<sa:position>
+					<gml:Point srsName="urn:ogc:def:crs:EPSG::4326">
+						<gml:pos>30.60246 114.104285</gml:pos>
+					</gml:Point>
+				</sa:position>
+			</sa:SamplingPoint>
+		</om:featureOfInterest>
+		
+		<om:result>
+			<swe:DataArray>
+				<swe:elementCount>
+					<swe:Count>
+						<swe:value>3</swe:value>
+					</swe:Count>
+				</swe:elementCount>
+				<swe:elementType name="Components">
+					<swe:DataRecord>
+						<swe:field name="Time">
+							<swe:Time definition="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"/>
+						</swe:field>
+						<swe:field name="AirTemperature">
+							<swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Temperature">
+								<swe:uom code="Cel"/>
+							</swe:Quantity>
+						</swe:field>						
+						<swe:field name="WindSpeed">
+							<swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Speed">
+								<swe:uom code="m/s"/>
+							</swe:Quantity>
+						</swe:field>
+						<swe:field name="WindDirection">
+							<swe:Quantity definition="urn:ABC:def:phenomenon:ABC:1.0.0:Direction">
+								<swe:uom code="degree"/>
+							</swe:Quantity>							
+						</swe:field>						
+					</swe:DataRecord>
+				</swe:elementType>
+				<swe:encoding>
+					<swe:TextBlock decimalSeparator="." tokenSeparator="," blockSeparator=";"/>
+				</swe:encoding>
+				<swe:values>
+				2011-01-01T00:00:00.000+08:00,-6.7,11.3,236;
+				2011-01-01T00:01:00.000+08:00,-6.7,10.8,235;
+				2011-01-01T00:02:00.000+08:00,-6.7,9.8,233;
+				</swe:values>
+			</swe:DataArray>
+		</om:result>
+		
+	</om:Observation>
+</InsertObservation>
